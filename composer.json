@@ -8,11 +8,14 @@
     ],
     "require":{
         "php": "^7.2|^8.0",
-        "hashids/hashids": "^4.1"
+        "hashids/hashids": "^4.1",
+        "illuminate/contracts": "^8.0",
+        "illuminate/support": "^8.0",
+        "graham-campbell/manager": "^4.4"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +31,10 @@
         "laravel": {
             "providers": [
                 "Yjtec\\Hashids\\HashidsServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Hashids": "Yjtec\\Hashids\\Facades\\Hashids"
+            }
         }
     }
 }
